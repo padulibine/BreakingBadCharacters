@@ -1,15 +1,14 @@
 package com.example.breakingbadcharacters.models
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class PersonnagesItem(
-    val appearance: List<Any>,
-    val better_call_saul_appearance: List<Int>,
-    val birthday: String,
-    val category: String,
-    val char_id: Int,
-    val img: String,
-    val name: String,
-    val nickname: String,
-    val occupation: List<String>,
-    val portrayed: String,
-    val status: String
+
+    @PrimaryKey val char_id: Int,
+    @ColumnInfo(name = "Name") val name: String,
+    @ColumnInfo(name = "Birthday") val birthday: String,
+    @ColumnInfo(name = "Image_URL") val img: String,
 )
